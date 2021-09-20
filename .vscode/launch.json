@@ -5,9 +5,23 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "blazorwasm",
-            "name": "Launch and Debug Blazor WebAssembly Application",
-            "request": "launch"
-        }
+            "sourceMaps": true,
+            "url": "http://localhost:5014/",
+            "trace": {
+              "logFile": "${workspaceFolder}/debugger-log.json",
+              "console": true
+            },
+            "breakOnLoad": true,
+            "smartStep": true,
+            "skipFiles": [],
+            "showAsyncStacks": true,
+            "timeout": 60000,
+            "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
+            "cleanUp": "wholeBrowser",
+            "name": "Launch",
+            "type": "pwa-chrome",
+            "request": "launch",
+            "continueOnDisconnect": true
+          }
     ]
 }
